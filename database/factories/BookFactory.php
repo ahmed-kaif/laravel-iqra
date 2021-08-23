@@ -22,7 +22,8 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-
+            'genre_id' => 1,
+            'title' => $this->faker->title(),
         ];
     }
 }
