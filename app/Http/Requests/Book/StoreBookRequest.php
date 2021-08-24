@@ -26,7 +26,6 @@ class StoreBookRequest extends FormRequest
         return [
             'title'=> ['required', 'string', 'unique:books,title'],
             'genre_id' => 'required',
-            'author_id' => 'required',
         ];
     }
 }

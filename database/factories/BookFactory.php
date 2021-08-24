@@ -23,7 +23,7 @@ class BookFactory extends Factory
     {
         return [
             'genre_id' => 1,
-            'title' => $this->faker->title(),
+            'title' => $this->faker->name(),
         ];
     }
 }

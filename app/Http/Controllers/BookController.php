@@ -41,7 +41,9 @@ class BookController extends Controller
      */
     public function store(StoreBookRequest $request)
     {
-        dd($request->validated());
+        $book = Book::create($request->validated());
+        $book->authors()->sync($request->author_id, false);
+        return redirect()->route('book.index')->with('success', 'Book Created Successfully');
     }
 
     /**
